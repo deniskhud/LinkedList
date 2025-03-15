@@ -194,18 +194,53 @@ void List<T>::print() {
 }
 int main()
 {
-    List<int> l1;
-    l1.push_back(10);
-    l1.push_back(5);
-    l1.push_back(31245);
-    l1.push_back(356);
-    l1.print();
-    
+    // Create a list of integers
+    List<int> myList;
 
-    List<int> l2 = l1;
-    l2.reverseList();
-    l2.print();
-    return 0;
+    // Add elements to the list
+    myList.push_back(10);  // Add to the end of the list
+    myList.push_back(20);
+    myList.push_back(30);
+    myList.push_front(5);  // Add to the front of the list
+
+    // Print the list
+    cout << "Original List: ";
+    myList.print();  // Output: 5 -> 10 -> 20 -> 30 -> NULL
+
+    // Access an element using the [] operator
+    cout << "Element at index 1: " << myList[1] << :endl;  // Output: 10
+
+    // Insert an element at a specific position
+    myList.insert(15, 2);  // Insert 15 at index 2
+
+    // Print the modified list
+    cout << "List after insertion: ";
+    myList.print();  // Output: 5 -> 10 -> 15 -> 20 -> 30 -> NULL
+
+    // Reverse the list
+    myList.reverseList();
+    cout << "Reversed List: ";
+    myList.print();  // Output: 30 -> 20 -> 15 -> 10 -> 5 -> NULL
+
+    // Remove element from the front
+    myList.pop_front();
+    cout << "List after pop_front: ";
+    myList.print();  // Output: 20 -> 15 -> 10 -> 5 -> NULL
+
+    // Remove element from the back
+    myList.pop_back();
+    cout << "List after pop_back: ";
+    myList.print();  // Output: 20 -> 15 -> 10 -> NULL
+
+    // Remove element at a specific index
+    myList.removeAt(1);  // Remove element at index 1
+    cout << "List after removeAt(1): ";
+    myList.print();  // Output: 20 -> 10 -> NULL
+
+    // Clear the list
+    myList.clear();
+    cout << "List after clear: ";
+    myList.print();  // Output: List is empty
 }
 
 template<typename T>
