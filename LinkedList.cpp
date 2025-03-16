@@ -208,7 +208,7 @@ int main()
     myList.print();  // Output: 5 -> 10 -> 20 -> 30 -> NULL
 
     // Access an element using the [] operator
-    cout << "Element at index 1: " << myList[1] << :endl;  // Output: 10
+    cout << "Element at index 1: " << myList[1] << endl;  // Output: 10
 
     // Insert an element at a specific position
     myList.insert(15, 2);  // Insert 15 at index 2
